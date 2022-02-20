@@ -4,5 +4,8 @@ package car_dealership;
 // Contains the business logic
 public class CarDealership {
 
+    private String name;
+    private int maxCars;
+    private Car[] carsInStock;
 
 }
