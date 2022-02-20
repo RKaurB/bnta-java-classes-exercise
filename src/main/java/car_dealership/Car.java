@@ -16,4 +16,29 @@ public class Car {
         this.engineType = engineType;
     }
 
+    // Getters & Setters
+    public Manufacturer getManufacturer() {
+        return this.manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public Double getPrice() {
+        return this.price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public EngineType getEngineType() {
+        return this.engineType;
+    }
+
+    public void setEngineType(EngineType engineType) {
+        this.engineType = engineType;
+    }
+    
 }
