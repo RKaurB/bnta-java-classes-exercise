@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Car {
 
     // Properties
-    Manufacturer manufacturer;
-    Double price;
-    EngineType engineType;
+    private Manufacturer manufacturer;
+    private Double price;
+    private EngineType engineType;
 
     // Constructors
     public Car() {}
