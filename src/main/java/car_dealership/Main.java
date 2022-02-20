@@ -1,5 +1,7 @@
 package car_dealership;
 
+import java.util.Arrays;
+
 // Main class
 public class Main {
 
@@ -12,9 +14,9 @@ public class Main {
         System.out.println(mercedes);
 
         // Test getters
-        System.out.println(mercedes.getManufacturer());
-        System.out.println(mercedes.getPrice());
-        System.out.println(mercedes.getEngineType());
+        System.out.println("Manufacturer: " + mercedes.getManufacturer());
+        System.out.println("Price: " + mercedes.getPrice());
+        System.out.println("Engine type: " + mercedes.getEngineType());
 
         // Test setters
         // Double newPrice = mercedes.getPrice() / 2;
@@ -25,6 +27,13 @@ public class Main {
 
         // Create new instance of carDealership object, called "Car Dealership, with maximum number of cars set at 10
         CarDealership dealership = new CarDealership("Car Dealership", 10);
+        // Print array of cars in stock in dealership
+        System.out.println("Cars in stock: " + Arrays.toString(dealership.getCarsInStock()));
+        // Call the countCarsInDealership method and print total number of cars in dealership
+        System.out.println("Number of cars in stock: " + dealership.countCarsInDealership());
 
+        // Test addCarToDealership the method in Main, by counting the number of cars, adding a new car, then counting again to make sure number has increased by 1
+        dealership.addCarToDealership(mercedes);
+        System.out.println("Updated number of cars in stock: " + dealership.countCarsInDealership());
     }
 }

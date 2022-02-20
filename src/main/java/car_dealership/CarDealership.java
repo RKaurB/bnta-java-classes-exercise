@@ -48,7 +48,7 @@ public class CarDealership {
     // Doesn't need to take any parameters, and should return an int
     public int countCarsInDealership() {
         // Initialise counter variable
-        int count = 0;
+        int countCars = 0;
 //        // For(i) loop to iterate through the array of cars in stock
 //        // (carsInStock.fori)
 //        for (int i = 0; i < carsInStock.length; i++) {
@@ -60,16 +60,32 @@ public class CarDealership {
 //            }
         // Enhanced for loop to iterate through the array of cars in stock
         // (carsInStock.for)
-        for (Car car : carsInStock) {
+        for (Car car : this.carsInStock) {
             // If array element at index(i) is not null
             if (car != null) {
                 // Then add to the count of cars in stock
                 // Increment car count
-                count++;
+                countCars++;
             }
         }
         // Return the total count
-        return count;
+        return countCars;
+    }
+
+    // Write another method to add a car to the dealership
+    // The method should hava a Car parameter, and doesn't need to return anything
+    public void addCarToDealership(Car car) {
+        // For each slot (element) in the array
+        for (int i = 0; i < carsInStock.length; i++) {
+            // If its value is null, i.e. empty
+            if (this.carsInStock[i] == null) {
+                // Then add the car to that slot
+                this.carsInStock[i] = car;
+                // Break out of the loop once car added
+                break;
+            }
+        }
+        // Test the method in Main, by counting the number of cars, adding a new car, then counting again to make sure number has increased by 1
     }
 
 }
