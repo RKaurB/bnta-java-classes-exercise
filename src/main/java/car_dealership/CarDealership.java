@@ -103,7 +103,7 @@ public class CarDealership {
     // Write another method to add a car to the dealership
     // The method should hava a Car parameter, and doesn't need to return anything
     public void addCarToDealership(Car car) {
-        // For each slot (element) in the array
+        // For each slot (element) in the cars array
         for (int i = 0; i < carsInStock.length; i++) {
             // If its value is null, i.e. empty
             if (this.carsInStock[i] == null) {
@@ -115,5 +115,9 @@ public class CarDealership {
         }
         // Test the method in Main, by counting the number of cars, adding a new car, then counting again to make sure number has increased by 1
     }
+
+    // Write a method for the dealership called findCarByManufacturer, which takes a String as a parameter and returns a Car object
+    // The method should return the first Car the dealership has in stock, with a manufacturer property matching the value passed to the method
+    // Test this in Main - create some Car objects, add them to the Dealership, store the result of the method to a variable, and print that variable
 
 }
