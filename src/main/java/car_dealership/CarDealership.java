@@ -1,5 +1,8 @@
 package car_dealership;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 // Class to represent a car dealership
 // Contains the business logic
 public class CarDealership {
@@ -42,6 +45,31 @@ public class CarDealership {
 
     public void setCarsInStock(Car[] carsInStock) {
         this.carsInStock = carsInStock;
+    }
+
+    // toString, equals, and hashCode methods
+    @Override
+    public String toString() {
+        return "CarDealership{" +
+                "name='" + name + '\'' +
+                ", maxCars=" + maxCars +
+                ", carsInStock=" + Arrays.toString(carsInStock) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CarDealership that = (CarDealership) o;
+        return maxCars == that.maxCars && name.equals(that.name) && Arrays.equals(carsInStock, that.carsInStock);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(name, maxCars);
+        result = 31 * result + Arrays.hashCode(carsInStock);
+        return result;
     }
 
     // Write a method that counts number of cars in the Dealership
