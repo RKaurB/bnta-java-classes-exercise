@@ -22,5 +22,9 @@ public class Main {
         // System.out.println(mercedes.getPrice());
         mercedes.setPrice(mercedes.getPrice() / 2);
         System.out.println("New price: " + mercedes.getPrice());
+
+        // Create new instance of carDealership object, called "Car Dealership, with maximum number of cars set at 10
+        CarDealership dealership = new CarDealership("Car Dealership", 10);
+
     }
 }
