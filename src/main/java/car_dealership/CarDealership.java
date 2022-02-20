@@ -44,5 +44,32 @@ public class CarDealership {
         this.carsInStock = carsInStock;
     }
 
+    // Write a method that counts number of cars in the Dealership
+    // Doesn't need to take any parameters, and should return an int
+    public int countCarsInDealership() {
+        // Initialise counter variable
+        int count = 0;
+//        // For(i) loop to iterate through the array of cars in stock
+//        // (carsInStock.fori)
+//        for (int i = 0; i < carsInStock.length; i++) {
+//            // If array element at index(i) is not null
+//            if (this.carsInStock[i] != null) {
+//                // Then add to the count of cars in stock
+//                // Increment car count
+//                count++;
+//            }
+        // Enhanced for loop to iterate through the array of cars in stock
+        // (carsInStock.for)
+        for (Car car : carsInStock) {
+            // If array element at index(i) is not null
+            if (car != null) {
+                // Then add to the count of cars in stock
+                // Increment car count
+                count++;
+            }
+        }
+        // Return the total count
+        return count;
+    }
 
 }
