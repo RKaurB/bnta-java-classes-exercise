@@ -1,5 +1,7 @@
 package car_dealership;
 
+import java.util.Objects;
+
 public class Car {
 
     // Properties
@@ -40,5 +42,28 @@ public class Car {
     public void setEngineType(EngineType engineType) {
         this.engineType = engineType;
     }
-    
+
+    // toString method
+    @Override
+    public String toString() {
+        return "Car{" +
+                "manufacturer=" + manufacturer +
+                ", price=" + price +
+                ", engineType=" + engineType +
+                '}';
+    }
+
+    // Equals & hashCode
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return manufacturer == car.manufacturer && price.equals(car.price) && engineType == car.engineType;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(manufacturer, price, engineType);
+    }
 }
